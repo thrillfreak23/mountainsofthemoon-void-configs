@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Generic .xprofile settings run for all window managers here
+xset r rate 400 35 &
+
+# Section dedicated exclusively to cwm
+if [ "$XDG_CURRENT_DESKTOP" = "cwm" ] || [ "$DESKTOP_SESSION" = "cwm" ] || pgrep -x "cwm" >/dev/null; then
+    # Add your cwm-specific startup programs below
+    feh --bg-scale ~/Pictures/wallpapers/cwm_bg.jpg &
+    xcompmgr &
+
+xrdb -load ~/.Xdefaults
+
+# 1. Clean up everything first (nuclear reset)
+pkill -u "$USER" -x pipewire
+pkill -u "$USER" -x wireplumber
+pkill -u "$USER" -x pipewire-pulse
+pkill -u "$USER" -x redshift
+pkill -u "$USER" -x slstatus
+pkill -u "$USER" -x dwmblocks
+pkill -u "$USER" -x emacs
+pkill -u "$USER" -x sxhkd
+pkill -u "$USER" -x volumeicon
+pkill -u "$USER" -x picom
+pkill -u "$USER" -x nm-applet
+pkill -u "$USER" -x blueman-applet
+pkill -u "$USER" -x polybar
+pkill -u "$USER" -x xfce4-pulseaudio-plugin
+
+
+sleep 1
+
+
+
+# picom
+picom &
+
+# polybar
+polybar example &
+
+# nm-applet
+nm-applet &
+
+# blueman-applet
+blueman-applet &
+
+# feh --bg-max /home/rachel/Build/void-artwork/assets/hires/028.png
+~/.fehbg
+
+# Start Pipewire stack (must be in this order)
+dbus-run-session pipewire &
+sleep 2.5
+wireplumber &
+sleep 2.5
+pipewire-pulse &
+
+# simple x hot key daemon
+sxhkd &
+
+# volume control
+# volumeicon &
+
+# emacs
+emacs --daemon 
+
+# audio applet
+xfce4-pulseaudio-plugin &
+
+# Redshift
+redshift -l 35:-81 -t 6500:4000 &
+
+# Input & X settings
+setxkbmap -option compose:ralt -option terminate:ctrl_alt_bksp
+fi
