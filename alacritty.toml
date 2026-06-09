@@ -1,0 +1,86 @@
+[font]
+size = 8.0
+
+[font.offset]
+x = 0
+y = 2
+
+[font.normal]
+family = "ZedMono Nerd Font"
+style = "Extended Medium"
+
+[window]
+resize_increments = true
+opacity = 1.00
+
+[window.dimensions]
+columns = 100
+lines = 25
+
+[window.padding]
+x = 3
+y = 3
+
+[keyboard]
+bindings = [
+    { key = "F10", action = "ToggleMaximized" },
+]
+
+[bell]
+animation = "Ease"
+duration = 100
+color = "#0000ff"
+
+[selection]
+save_to_clipboard = true
+
+[cursor.style]
+shape = "block"
+blinking = "Always"
+
+[mouse]
+bindings = [
+    { mouse = "Right", action = "Paste" },
+]
+
+# [colors.primary]
+# background = "#1E2229"
+# foreground = "#17A88B"
+# 
+# [colors.normal]
+# black = "#1E2229"
+# red = "#ED1515"
+# green = "#44853A"
+# yellow = "#F67400"
+# blue = "#1D99F3"
+# magenta = "#9B59B6"
+# cyan = "#1ABC9C"
+# white = "#FCFCFC"
+# 
+# [colors.bright]
+# black = "#7F8C8D"
+# red = "#C0392B"
+# green = "#55A649"
+# yellow = "#FDBC4B"
+# blue = "#3DAEE9"
+# magenta = "#8E44AD"
+# cyan = "#16A085"
+# white = "#FFFFFF"
+
+[terminal]
+osc52 = "CopyPaste"
+
+[terminal.shell]
+program = "/usr/bin/fish"
+args = [
+    "--login",
+]
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/oxocarbon.toml"
+]
+
+# notes
+# rigel is pretty neat
+#
