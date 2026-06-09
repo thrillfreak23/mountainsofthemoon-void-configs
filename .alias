@@ -1,0 +1,30 @@
+alias cfsx='nvim ~/.config/sxhkd/sxhkdrc'
+alias cfnvim='nvim ~/.config/nvim/init.lua'
+alias m='mkdir -p'
+alias ls='eza --color=auto'
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
+alias l='eza -1'
+alias add='sudo xbps-install -S'
+alias up='sudo xbps-install -Syyu'
+alias search='xbps-query -Rs'
+alias updb='sudo updatedb'
+alias cfk='nvim ~/.config/kitty/kitty.conf'
+alias cfg='nvim ~/.config/ghostty/config'
+alias cff='nvim ~/.config/fish/config.fish'
+alias cfm='nvim ~/.config/mango/config.conf'
+alias cfq='nvim ~/.config/quickshell/shell.qml'
+alias b="sudo brightnessctl"
+alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
+alias cfal='nvim ~/.config/alacritty/alacritty.toml'
+alias v=nvim
+alias n=nvim
+alias s='source ~/.alias'
+
+
+
+# alias enox='devour emacsclient -nw -a ""'
+alias EmacsRestart='SVDIR=~/.config/service sv restart emacs'
+
+alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'

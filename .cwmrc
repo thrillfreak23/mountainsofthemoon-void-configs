@@ -1,0 +1,24 @@
+moveamount 5
+snapdist 25
+ignore "xclock"
+ignore "polybar-example_eDP-1"
+borderwidth 4
+color activeborder darkblue
+color inactiveborder darkred
+color groupborder green
+color ungroupborder grey
+
+
+
+color font darkgreen
+color selfont orange
+color menubg "#cccccc"
+color menufg "#555555"
+fontname "JetBrainsMono Nerd Font:style=Bold:size=15:antialias=true:autohint=true"
+
+gap 50 5 5 5
+# bind-key CMS-a 
+
+command Brave /usr/local/bin/brave
+command Kitty /usr/bin/kitty
+command term /usr/bin/kitty
