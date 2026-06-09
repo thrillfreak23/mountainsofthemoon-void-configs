@@ -1,0 +1,26 @@
+super + p
+	dmenu_run -fn "JetBrainsMono Nerd Font:size=20:weight=Medium" -nf orange -b
+
+
+# Volume Control (using wpctl)
+XF86AudioRaiseVolume
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+
+XF86AudioLowerVolume
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+
+XF86AudioMute
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+
+# Brightness Control (using brightnessctl)
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+
+# Reload sxhkd Configuration
+super + ctrl + r
+    pkill -USR1 -x sxhkd
+

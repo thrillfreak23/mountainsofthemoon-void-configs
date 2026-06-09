@@ -1,0 +1,21 @@
+# Volume Control (using amixer)
+XF86AudioRaiseVolume
+    amixer -q sset Master 5%+ unmute
+
+XF86AudioLowerVolume
+    amixer -q sset Master 5%- unmute
+
+XF86AudioMute
+    amixer -q sset Master toggle
+
+# Brightness Control (using brightnessctl)
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+
+# Reload sxhkd Configuration
+super + ctrl + r
+    pkill -USR1 -x sxhkd
+

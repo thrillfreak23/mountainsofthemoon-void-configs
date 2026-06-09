@@ -1,0 +1,7 @@
+#!/bin/sh
+# Ensure your environment variables are available
+export HOME="/home/$(whoami)"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+
+# Execute emacs in the foreground
+exec emacs --fg-daemon

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Optional: point to a specific config if not using the default ~/.config/mpd/mpd.conf
+# MPDCONF=${XDG_CONFIG_HOME:-$HOME/.config}/mpd/mpd.conf
+# exec mpd --no-daemon "$MPDCONF"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+exec mpd --no-daemon
